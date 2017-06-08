@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
+<meta name="description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。">
 <meta name="keywords" content="IOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Anti_Debug and Solution">
 <meta property="og:url" content="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
-<meta property="og:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
-<meta property="og:updated_time" content="2017-06-08T04:48:51.000Z">
+<meta property="og:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。">
+<meta property="og:updated_time" content="2017-06-08T08:17:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anti_Debug and Solution">
-<meta name="twitter:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
+<meta name="twitter:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。">
 
 
 
@@ -117,7 +117,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -140,7 +140,7 @@
   <title>Anti_Debug and Solution | Kozoro Blog</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -189,7 +189,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">虽然我现在没车没房 但是我骚啊~...</p>
       
   </div>
 
@@ -214,17 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            Über
+            首页
           </a>
         </li>
       
@@ -234,17 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
+            归档
           </a>
         </li>
       
@@ -257,7 +237,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Suche
+            搜索
           </a>
         </li>
       
@@ -277,7 +257,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
+             placeholder="搜索..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -338,9 +318,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-08T09:25:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T09:25:18+08:00">
                 2017-06-08
               </time>
             
@@ -359,7 +339,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -400,6 +380,7 @@
         <blockquote>
 <p>在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。</p>
 </blockquote>
+<a id="more"></a>
 <h1 id="判断手机是否越狱"><a href="#判断手机是否越狱" class="headerlink" title="判断手机是否越狱"></a>判断手机是否越狱</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib</span></div><div class="line"><span class="meta">#来判断手机是否已经越狱</span></div><div class="line"><span class="keyword">void</span> dylibCheck() </div><div class="line">&#123;</div><div class="line">	uint32_t count = _dyld_image_count();</div><div class="line">	<span class="keyword">char</span> *substrate = <span class="string">"/Library/MobileSubstrate/MobileSubstrate.dylib"</span>;</div><div class="line">	<span class="keyword">for</span>(uint32_t i = <span class="number">0</span>; i &lt; count; i++) </div><div class="line">	&#123;</div><div class="line">		<span class="keyword">const</span> <span class="keyword">char</span> *dyld = _dyld_get_image_name(i);</div><div class="line">		<span class="keyword">if</span> (strcmp(dyld,substrate)==<span class="number">0</span>) </div><div class="line">			&#123; </div><div class="line">				<span class="built_in">NSLog</span>(<span class="string">@"Substrate found!"</span>); </div><div class="line">			&#125;</div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Solution</strong> </p>
@@ -567,10 +548,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -582,7 +563,7 @@
                alt="Kozoro" />
           <p class="site-author-name" itemprop="name">Kozoro</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">生而为人 善良一点</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -590,8 +571,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -602,7 +583,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -613,7 +594,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -679,11 +660,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>

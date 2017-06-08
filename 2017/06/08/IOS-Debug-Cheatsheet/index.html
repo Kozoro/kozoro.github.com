@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="">
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="command查找进程12ps aux | grep /Appps -e | grep /Applications 查找文件1grep -r findfile  /System/Library/ 分离 fat binary12lipo -thin armv7 xxx.decrypted -out xxx_armv7.decryptedlipo -thin arm64 xxx.decrypted -">
+<meta name="description" content="command">
 <meta name="keywords" content="IOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IOS Debug Cheatsheet ">
 <meta property="og:url" content="http://Kozoro.github.io/2017/06/08/IOS-Debug-Cheatsheet/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
-<meta property="og:description" content="command查找进程12ps aux | grep /Appps -e | grep /Applications 查找文件1grep -r findfile  /System/Library/ 分离 fat binary12lipo -thin armv7 xxx.decrypted -out xxx_armv7.decryptedlipo -thin arm64 xxx.decrypted -">
-<meta property="og:updated_time" content="2017-06-08T06:25:20.000Z">
+<meta property="og:description" content="command">
+<meta property="og:updated_time" content="2017-06-08T08:16:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS Debug Cheatsheet ">
-<meta name="twitter:description" content="command查找进程12ps aux | grep /Appps -e | grep /Applications 查找文件1grep -r findfile  /System/Library/ 分离 fat binary12lipo -thin armv7 xxx.decrypted -out xxx_armv7.decryptedlipo -thin arm64 xxx.decrypted -">
+<meta name="twitter:description" content="command">
 
 
 
@@ -117,7 +117,7 @@
     motion: true,
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -140,7 +140,7 @@
   <title>IOS Debug Cheatsheet  | Kozoro Blog</title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
 
@@ -189,7 +189,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <p class="site-subtitle">虽然我现在没车没房 但是我骚啊~...</p>
       
   </div>
 
@@ -214,17 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            Über
+            首页
           </a>
         </li>
       
@@ -234,17 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
+            归档
           </a>
         </li>
       
@@ -257,7 +237,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Suche
+            搜索
           </a>
         </li>
       
@@ -277,7 +257,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
+             placeholder="搜索..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -338,9 +318,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-08T13:48:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-08T13:48:43+08:00">
                 2017-06-08
               </time>
             
@@ -359,7 +339,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -397,7 +377,8 @@
       
 
       
-        <h1 id="command"><a href="#command" class="headerlink" title="command"></a><strong>command</strong></h1><h4 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep /App</div><div class="line">ps -e | grep /Applications</div></pre></td></tr></table></figure>
+        <h1 id="command"><a href="#command" class="headerlink" title="command"></a><strong>command</strong></h1><a id="more"></a>
+<h4 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep /App</div><div class="line">ps -e | grep /Applications</div></pre></td></tr></table></figure>
 <h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -r findfile  /System/Library/</div></pre></td></tr></table></figure>
 <h4 id="分离-fat-binary"><a href="#分离-fat-binary" class="headerlink" title="分离 fat binary"></a>分离 fat binary</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lipo -thin armv7 xxx.decrypted -out xxx_armv7.decrypted</div><div class="line">lipo -thin arm64 xxx.decrypted -out xxx_arm64.decrypted</div></pre></td></tr></table></figure>
 <h4 id="Class-Dump"><a href="#Class-Dump" class="headerlink" title="Class Dump"></a>Class Dump</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class-dump --list-arches xxx.decrypted</div><div class="line"></div><div class="line">class-dump -S -s -H xxx_armv7.decrypted -o dumparmv7</div><div class="line">class-dump -s -S -H --arch armv7 xxx.decrypted -o xxx</div></pre></td></tr></table></figure>
@@ -478,6 +459,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/06/08/Kill-SSL-And-Logs/" rel="prev" title="Kill SSL And Logs">
+                Kill SSL And Logs <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -550,10 +535,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            站点概览
           </li>
         </ul>
       
@@ -565,7 +550,7 @@
                alt="Kozoro" />
           <p class="site-author-name" itemprop="name">Kozoro</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">生而为人 善良一点</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -573,8 +558,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
@@ -585,7 +570,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">分类</span>
               
             </div>
           
@@ -596,7 +581,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-name">标签</span>
               
             </div>
           
@@ -662,11 +647,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  Theme -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
