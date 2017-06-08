@@ -4,10 +4,16 @@
     <title><![CDATA[123132]]></title>
     <url>%2F2017%2F06%2F08%2F123132%2F</url>
     <content type="text"><![CDATA[dasdasdsadas1111]]></content>
+      <categories>
+        <category>LLVM</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
     <url>%2F2017%2F06%2F07%2Fhello-world%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate @(示例笔记本)[马克飞象|帮助|Markdown] 马克飞象是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述： 功能丰富 ：支持高亮代码块、LaTeX 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手； 代码块1234567891011121314151617181920import requestsheaders = &#123; 'Connection': 'keep-alive', 'Accept': 'image/webp,*/*;q=0.8', 'User-Agent': 'Mozilla/5.0 (Linux; Android 5.0.2; Nexus 5 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36; 360browser(securitypay,securityinstalled); 360(android,uppayplugin); 360 Aphone Browser (2.0.5)', 'Referer': 'http://www.youku.com/', 'Accept-Encoding': 'gzip,deflate', 'Accept-Language': 'zh-CN,en-US;q=0.8', 'X-Requested-With': 'com.qihoo.expressbrowser'&#125;rq = requests.session()rq.headers.update(headers)print timestamp_to_strtime(1496732238556)url = 'http://statis.mobile.youku.com/openapi-wireless/statis/recall_app_service?'\ 'pid=%s&amp;source=mplaypage0&amp;ua=other&amp;datetime=%srefer=&amp;cookieid=%s&amp;tuid=&amp;pagetype=1&amp;'\ 'special=0&amp;sender=1&amp;rand=%s'print timestamp_to_strtime(ins_current_time())millis = int(round(time.time()*1000))print millis More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>LLVM</category>
+      </categories>
   </entry>
 </search>
