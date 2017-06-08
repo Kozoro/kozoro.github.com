@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="IOS," />
 
 
 
@@ -93,16 +93,17 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
+<meta name="keywords" content="IOS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://Kozoro.github.io/2017/06/07/hello-world/index.html">
+<meta property="og:title" content="Anti_Debug and Solution">
+<meta property="og:url" content="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
-<meta property="og:updated_time" content="2017-06-08T01:14:41.000Z">
+<meta property="og:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
+<meta property="og:updated_time" content="2017-06-08T02:14:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Anti_Debug and Solution">
+<meta name="twitter:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。  判断手机是否越狱123456789101112131415#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib#来判断手机是">
 
 
 
@@ -130,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://Kozoro.github.io/2017/06/07/hello-world/"/>
+  <link rel="canonical" href="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/"/>
 
 
 
 
 
-  <title>Hello World | Kozoro Blog</title>
+  <title>Anti_Debug and Solution | Kozoro Blog</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -213,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Accueil
           </a>
         </li>
       
@@ -223,7 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            Über
+            A propos
           </a>
         </li>
       
@@ -233,7 +234,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -256,7 +257,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Suche
+            recherche
           </a>
         </li>
       
@@ -310,7 +311,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/07/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Kozoro">
@@ -327,7 +328,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">Anti_Debug and Solution</h1>
         
 
         <div class="post-meta">
@@ -337,10 +338,10 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posté le</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-07T21:42:24+08:00">
-                2017-06-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-08T09:25:18+08:00">
+                2017-06-08
               </time>
             
 
@@ -358,12 +359,12 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">in</span>
+                <span class="post-meta-item-text">In</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LLVM/" itemprop="url" rel="index">
-                    <span itemprop="name">LLVM</span>
+                  <a href="/categories/Anti/" itemprop="url" rel="index">
+                    <span itemprop="name">Anti</span>
                   </a>
                 </span>
 
@@ -396,22 +397,28 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>@(示例笔记本)[马克飞象|帮助|Markdown]</p>
-<p><strong>马克飞象</strong>是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：</p>
-<ul>
-<li><strong>功能丰富</strong> ：支持高亮代码块、<em>LaTeX</em> 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；</li>
-</ul>
-<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">headers = &#123;</div><div class="line">	<span class="string">'Connection'</span>: <span class="string">'keep-alive'</span>,</div><div class="line">	<span class="string">'Accept'</span>: <span class="string">'image/webp,*/*;q=0.8'</span>,</div><div class="line">	<span class="string">'User-Agent'</span>: <span class="string">'Mozilla/5.0 (Linux; Android 5.0.2; Nexus 5 Build/LRX22G) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile Safari/537.36; 360browser(securitypay,securityinstalled); 360(android,uppayplugin); 360 Aphone Browser (2.0.5)'</span>,</div><div class="line">	<span class="string">'Referer'</span>: <span class="string">'http://www.youku.com/'</span>,</div><div class="line">	<span class="string">'Accept-Encoding'</span>: <span class="string">'gzip,deflate'</span>,</div><div class="line">	<span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,en-US;q=0.8'</span>,</div><div class="line">	<span class="string">'X-Requested-With'</span>: <span class="string">'com.qihoo.expressbrowser'</span></div><div class="line">&#125;</div><div class="line">rq = requests.session()</div><div class="line">rq.headers.update(headers)</div><div class="line"></div><div class="line"><span class="keyword">print</span> timestamp_to_strtime(<span class="number">1496732238556</span>)</div><div class="line">url = <span class="string">'http://statis.mobile.youku.com/openapi-wireless/statis/recall_app_service?'</span>\</div><div class="line">	   <span class="string">'pid=%s&amp;source=mplaypage0&amp;ua=other&amp;datetime=%srefer=&amp;cookieid=%s&amp;tuid=&amp;pagetype=1&amp;'</span>\</div><div class="line">	   <span class="string">'special=0&amp;sender=1&amp;rand=%s'</span></div><div class="line"><span class="keyword">print</span> timestamp_to_strtime(ins_current_time())</div><div class="line">millis = int(round(time.time()*<span class="number">1000</span>))</div><div class="line"><span class="keyword">print</span> millis</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
+        <blockquote>
+<p>在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。</p>
+</blockquote>
+<h1 id="判断手机是否越狱"><a href="#判断手机是否越狱" class="headerlink" title="判断手机是否越狱"></a>判断手机是否越狱</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib</span></div><div class="line"><span class="meta">#来判断手机是否已经越狱</span></div><div class="line"><span class="keyword">void</span> dylibCheck() </div><div class="line">&#123;</div><div class="line">	uint32_t count = _dyld_image_count();</div><div class="line">	<span class="keyword">char</span> *substrate = <span class="string">"/Library/MobileSubstrate/MobileSubstrate.dylib"</span>;</div><div class="line">	<span class="keyword">for</span>(uint32_t i = <span class="number">0</span>; i &lt; count; i++) </div><div class="line">	&#123;</div><div class="line">		<span class="keyword">const</span> <span class="keyword">char</span> *dyld = _dyld_get_image_name(i);</div><div class="line">		<span class="keyword">if</span> (strcmp(dyld,substrate)==<span class="number">0</span>) </div><div class="line">			&#123; </div><div class="line">				<span class="built_in">NSLog</span>(<span class="string">@"Substrate found!"</span>); </div><div class="line">			&#125;</div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Solution</strong> </p>
+</blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">uint32_t (*orig__dyld_image_count)(<span class="keyword">void</span>) = _dyld_image_count;</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span> *(*orig__dyld_get_image_name)(uint32_t <span class="keyword">id</span>) = _dyld_get_image_name;</div><div class="line">uint32_t replaced__dyld_image_count(<span class="keyword">void</span>) </div><div class="line">&#123;</div><div class="line">	<span class="built_in">NSString</span>* preferenceFilePath = @PREFERENCEFILE;</div><div class="line">	<span class="built_in">NSMutableDictionary</span>* plist = [[<span class="built_in">NSMutableDictionary</span> alloc] initWithContentsOfFile:preferenceFilePath];</div><div class="line">	<span class="keyword">int</span> userCount = [[plist objectForKey:<span class="string">@"dyld_image_countValue"</span>] intValue];</div><div class="line">	uint32_t count;</div><div class="line">	uint32_t realCount = orig__dyld_image_count();</div><div class="line">	<span class="keyword">if</span> (userCount &gt; <span class="number">0</span> &amp;&amp; userCount &lt; <span class="number">31337</span>) </div><div class="line">	&#123; </div><div class="line">		count = (uint32_t) userCount;</div><div class="line">	&#125;<span class="keyword">else</span></div><div class="line">	&#123;</div><div class="line">		count = realCount;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> count; </div><div class="line">&#125;</div><div class="line"><span class="keyword">const</span> <span class="keyword">char</span>* replaced__dyld_get_image_name(uint32_t <span class="keyword">id</span>) </div><div class="line">&#123;</div><div class="line">	<span class="keyword">const</span> <span class="keyword">char</span>* realName = (<span class="keyword">const</span> <span class="keyword">char</span> *) orig__dyld_get_image_name(<span class="keyword">id</span>);</div><div class="line">	<span class="keyword">const</span> <span class="keyword">char</span> *fakeName = (<span class="keyword">const</span> <span class="keyword">char</span> *) orig__dyld_get_image_name(<span class="number">0</span>);</div><div class="line">	<span class="keyword">char</span> *returnedName = (<span class="keyword">char</span> *)realName;</div><div class="line">	<span class="keyword">if</span> (blockPath(realName))</div><div class="line">	&#123; </div><div class="line">		returnedName = (<span class="keyword">char</span> *)fakeName; </div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> returnedName;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="检查相关api函数是否被Hook"><a href="#检查相关api函数是否被Hook" class="headerlink" title="检查相关api函数是否被Hook"></a>检查相关api函数是否被Hook</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//被hook函数后一般生成的代码地址是这种</span></div><div class="line">ldr x16, #<span class="number">8</span> <span class="comment">//获取当前地址+8的内容存到x16寄存器种</span></div><div class="line">br x16	<span class="comment">//跳转到x16寄存器 就是跳转到被hook以后的地址去了</span></div><div class="line">.<span class="keyword">long</span> <span class="number">0</span>x****</div><div class="line">.<span class="keyword">long</span> <span class="number">0x00000001</span> <span class="comment">//这里存放跳转地址</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Solution</strong></p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//取一个函数的绝对地址 判断前0x10字节内是否存在hook的特征码</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">isFunctionHooked</span><span class="params">(<span class="keyword">void</span> * funcptr)</span> </span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> * funcaddr = (<span class="keyword">unsigned</span> <span class="keyword">int</span> *) funcptr; </div><div class="line">	<span class="keyword">if</span> (funcptr) </div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span> (funcaddr[<span class="number">0</span>] == <span class="number">0x58000050</span> &amp;&amp; funcaddr[<span class="number">1</span>] == <span class="number">0xd61f0200</span> &amp;&amp; funcaddr[<span class="number">3</span>] == <span class="number">0x1</span>) </div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="阻止调试器附加调试系列"><a href="#阻止调试器附加调试系列" class="headerlink" title="阻止调试器附加调试系列"></a>阻止调试器附加调试系列</h1><h2 id="ptrace"><a href="#ptrace" class="headerlink" title="ptrace"></a>ptrace</h2><blockquote>
+<p>ptrace is a syscall that provides a mechanism by which a parent process may observe and control the execution of another process. However, the ptrace syscall can be called by an iOS application in another way that prevents tracing from a debugger. When PT_DENY_ATTACH is passed as request, the application informs the operating system that it doesn’t want to be traced or debugged and will exit with a segmentation fault if traced.</p>
+</blockquote>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> (*ptrace_ptr_t)(<span class="keyword">int</span> _request, pid_t _pid, caddr_t _addr, <span class="keyword">int</span> _data);</div><div class="line"><span class="meta">#if !defined(PT_DENY_ATTACH) </span></div><div class="line"><span class="meta">#define PT_DENY_ATTACH 31 </span></div><div class="line"><span class="meta">#endif</span></div><div class="line"><span class="keyword">void</span>* handle = dlopen(<span class="number">0</span>, RTLD_GLOBAL | RTLD_NOW);</div><div class="line">ptrace_ptr_t ptrace_ptr = dlsym(handle, <span class="string">"ptrace"</span>);</div><div class="line">ptrace_ptr(PT_DENY_ATTACH, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</div><div class="line">dlclose(handle);</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>Solution</strong></p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> (*orig_ptrace) (<span class="keyword">int</span> request, <span class="keyword">pid_t</span> pid, <span class="keyword">caddr_t</span> addr, <span class="keyword">int</span> data);</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">replaced_ptrace</span> <span class="params">(<span class="keyword">int</span> request, <span class="keyword">pid_t</span> pid, <span class="keyword">caddr_t</span> addr, <span class="keyword">int</span> data)</span></span></div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span> (request == <span class="number">31</span>)</div><div class="line">	&#123; </div><div class="line">		request = <span class="number">-1</span>; </div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> orig_ptrace(request, pid, addr, data); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="syscall"><a href="#syscall" class="headerlink" title="syscall"></a>syscall</h2><h2 id="sysctl"><a href="#sysctl" class="headerlink" title="sysctl"></a>sysctl</h2>
       
     </div>
 
@@ -438,27 +445,17 @@
 
     <footer class="post-footer">
       
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/08/123132/" rel="prev" title="123132">
-                123132 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
+        <div class="post-tags">
+          
+            <a href="/tags/IOS/" rel="tag"># IOS</a>
+          
         </div>
+      
+
+      
+      
+      
+
       
 
       
@@ -529,10 +526,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table Des Matières
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Ensemble
           </li>
         </ul>
       
@@ -552,8 +549,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">articles</span>
               </a>
             </div>
           
@@ -564,11 +561,20 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">Kategorien</span>
+                <span class="site-state-item-name">categories</span>
               
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">tags</span>
+              
+            </div>
           
 
         </nav>
@@ -600,7 +606,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块"><span class="nav-number">1.4.</span> <span class="nav-text">代码块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.5.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#判断手机是否越狱"><span class="nav-number">1.</span> <span class="nav-text">判断手机是否越狱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#检查相关api函数是否被Hook"><span class="nav-number">2.</span> <span class="nav-text">检查相关api函数是否被Hook</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#阻止调试器附加调试系列"><span class="nav-number">3.</span> <span class="nav-text">阻止调试器附加调试系列</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ptrace"><span class="nav-number">3.1.</span> <span class="nav-text">ptrace</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#syscall"><span class="nav-number">3.2.</span> <span class="nav-text">syscall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sysctl"><span class="nav-number">3.3.</span> <span class="nav-text">sysctl</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -632,11 +638,11 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
-  Theme -
+  Thème -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Muse
   </a>
