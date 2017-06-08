@@ -308,6 +308,168 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/08/IOS-Debug-Cheatsheet/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kozoro">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kozoro Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/08/IOS-Debug-Cheatsheet/" itemprop="url">IOS Debug Cheatsheet </a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-08T13:48:43+08:00">
+                2017-06-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">in</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Cheatsheet/" itemprop="url" rel="index">
+                    <span itemprop="name">Cheatsheet</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="command"><a href="#command" class="headerlink" title="command"></a><strong>command</strong></h1><h4 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep /App</div><div class="line">ps -e | grep /Applications</div></pre></td></tr></table></figure>
+<h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -r findfile  /System/Library/</div></pre></td></tr></table></figure>
+<h4 id="分离-fat-binary"><a href="#分离-fat-binary" class="headerlink" title="分离 fat binary"></a>分离 fat binary</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lipo -thin armv7 xxx.decrypted -out xxx_armv7.decrypted</div><div class="line">lipo -thin arm64 xxx.decrypted -out xxx_arm64.decrypted</div></pre></td></tr></table></figure>
+<h4 id="Class-Dump"><a href="#Class-Dump" class="headerlink" title="Class Dump"></a>Class Dump</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class-dump --list-arches xxx.decrypted</div><div class="line"></div><div class="line">class-dump -S -s -H xxx_armv7.decrypted -o dumparmv7</div><div class="line">class-dump -s -S -H --arch armv7 xxx.decrypted -o xxx</div></pre></td></tr></table></figure>
+<h1 id="LLDB"><a href="#LLDB" class="headerlink" title="LLDB"></a><strong>LLDB</strong></h1><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="https://github.com/iosre/iOSAppReverseEngineering" target="_blank" rel="external">https://github.com/iosre/iOSAppReverseEngineering</a></li>
+<li><a href="http://objccn.io/issue-19-2/" target="_blank" rel="external">http://objccn.io/issue-19-2/</a></li>
+</ul>
+<h4 id="帮助"><a href="#帮助" class="headerlink" title="帮助"></a>帮助</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">help</span> frame</div></pre></td></tr></table></figure>
+<h4 id="打印UI结构"><a href="#打印UI结构" class="headerlink" title="打印UI结构"></a>打印UI结构</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">po [[[UIWindow keyWindow] rootViewController] _printHierarchy]    (iOS 8)</div><div class="line">po [[UIWindow keyWindow] recursiveDescription]</div></pre></td></tr></table></figure>
+<h4 id="栈信息"><a href="#栈信息" class="headerlink" title="栈信息"></a>栈信息</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">bt (backtrace)</div><div class="line">bt all (all threads)</div></pre></td></tr></table></figure>
+<h4 id="断点"><a href="#断点" class="headerlink" title="断点"></a>断点</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">br s -a 0x0023234f</div><div class="line">breakpoint <span class="built_in">set</span> -F <span class="string">"-[NSArray objectAtIndex:]"</span></div><div class="line"></div><div class="line">br s -a 0x02107730+0x000ab000 -c <span class="string">'(BOOL)[(NSString *)$r2 isEqualToString:@"snakeninny"]'</span></div><div class="line"></div><div class="line">b ptrace</div></pre></td></tr></table></figure>
+<h4 id="lookup"><a href="#lookup" class="headerlink" title="lookup"></a>lookup</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">image lookup -address 0x1234</div><div class="line">image lookup -rn xx</div></pre></td></tr></table></figure>
+<h4 id="远程调试"><a href="#远程调试" class="headerlink" title="远程调试"></a>远程调试</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">platform select remote-ios</div><div class="line">process connect connect://127.0.0.1:3333 <span class="comment">#链接</span></div><div class="line">debugserver *:1234 -a xxxx	<span class="comment">#附加</span></div><div class="line">debugserver -x backboard *:1234 xxxx <span class="comment">#调试启动</span></div></pre></td></tr></table></figure>
+<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a><strong>ssh</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -lroot 127.0.0.1 -p2222</div></pre></td></tr></table></figure>
+<h1 id="Info-plist"><a href="#Info-plist" class="headerlink" title="Info.plist"></a><strong>Info.plist</strong></h1><h4 id="输出bundle-id"><a href="#输出bundle-id" class="headerlink" title="输出bundle id"></a>输出bundle id</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat Info.plist | grep com.</div></pre></td></tr></table></figure>
+<h1 id="dumpdecrypted"><a href="#dumpdecrypted" class="headerlink" title="dumpdecrypted"></a><strong>dumpdecrypted</strong></h1><h4 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="https://github.com/stefanesser/dumpdecrypted" target="_blank" rel="external">https://github.com/stefanesser/dumpdecrypted</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">chmod +x dumpdecrypted.dylib</div><div class="line">DYLD_INSERT_LIBRARIES=dumpdecrypted.dylib xxxx</div></pre></td></tr></table></figure>
+<h1 id="theos"><a href="#theos" class="headerlink" title="theos"></a><strong>theos</strong></h1><h4 id="参考-2"><a href="#参考-2" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="https://github.com/theos/theos" target="_blank" rel="external">https://github.com/theos/theos</a></li>
+</ul>
+<h1 id="usbmuxd"><a href="#usbmuxd" class="headerlink" title="usbmuxd"></a><strong>usbmuxd</strong></h1><h4 id="参考-3"><a href="#参考-3" class="headerlink" title="参考"></a>参考</h4><ul>
+<li><a href="https://cgit.sukimashita.com/usbmuxd.git/snapshot/usbmuxd-1.0.8.tar.gz" target="_blank" rel="external">https://cgit.sukimashita.com/usbmuxd.git/snapshot/usbmuxd-1.0.8.tar.gz</a></li>
+<li><a href="https://cgit.sukimashita.com/usbmuxd.git/" target="_blank" rel="external">https://cgit.sukimashita.com/usbmuxd.git/</a></li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">python tcprelay.py -t 22:2222</div></pre></td></tr></table></figure>
+<h1 id="iproxy"><a href="#iproxy" class="headerlink" title="iproxy"></a><strong>iproxy</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">iproxy 2222 22 &amp; iproxy 3333 1234  <span class="comment">#映射端口</span></div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -523,7 +685,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
@@ -534,7 +696,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">Kategorien</span>
               
             </div>
