@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="command">
+<meta name="description" content="command查找进程">
 <meta name="keywords" content="IOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IOS Debug Cheatsheet ">
 <meta property="og:url" content="http://Kozoro.github.io/2017/06/08/IOS-Debug-Cheatsheet/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
-<meta property="og:description" content="command">
-<meta property="og:updated_time" content="2017-06-08T08:16:57.000Z">
+<meta property="og:description" content="command查找进程">
+<meta property="og:updated_time" content="2017-06-08T08:30:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS Debug Cheatsheet ">
-<meta name="twitter:description" content="command">
+<meta name="twitter:description" content="command查找进程">
 
 
 
@@ -377,8 +377,8 @@
       
 
       
-        <h1 id="command"><a href="#command" class="headerlink" title="command"></a><strong>command</strong></h1><a id="more"></a>
-<h4 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep /App</div><div class="line">ps -e | grep /Applications</div></pre></td></tr></table></figure>
+        <h1 id="command"><a href="#command" class="headerlink" title="command"></a><strong>command</strong></h1><h4 id="查找进程"><a href="#查找进程" class="headerlink" title="查找进程"></a>查找进程</h4><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ps aux | grep /App</div><div class="line">ps -e | grep /Applications</div></pre></td></tr></table></figure>
 <h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -r findfile  /System/Library/</div></pre></td></tr></table></figure>
 <h4 id="分离-fat-binary"><a href="#分离-fat-binary" class="headerlink" title="分离 fat binary"></a>分离 fat binary</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lipo -thin armv7 xxx.decrypted -out xxx_armv7.decrypted</div><div class="line">lipo -thin arm64 xxx.decrypted -out xxx_arm64.decrypted</div></pre></td></tr></table></figure>
 <h4 id="Class-Dump"><a href="#Class-Dump" class="headerlink" title="Class Dump"></a>Class Dump</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class-dump --list-arches xxx.decrypted</div><div class="line"></div><div class="line">class-dump -S -s -H xxx_armv7.decrypted -o dumparmv7</div><div class="line">class-dump -s -S -H --arch armv7 xxx.decrypted -o xxx</div></pre></td></tr></table></figure>
@@ -558,7 +558,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

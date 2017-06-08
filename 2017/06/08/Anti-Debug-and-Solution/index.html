@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://Kozoro.github.io/2017/06/08/Anti-Debug-and-Solution/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
 <meta property="og:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。">
-<meta property="og:updated_time" content="2017-06-08T08:17:18.000Z">
+<meta property="og:updated_time" content="2017-06-08T08:30:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anti_Debug and Solution">
 <meta name="twitter:description" content="在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。">
@@ -381,7 +381,7 @@
 <p>在逆向的过程中,难免会碰到一些应用带有Anti_Debug的功能,这里记录下了我在以往逆向的过程中碰到的一些反调试和对应的解决方案,分享给大家。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="判断手机是否越狱"><a href="#判断手机是否越狱" class="headerlink" title="判断手机是否越狱"></a>判断手机是否越狱</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib</span></div><div class="line"><span class="meta">#来判断手机是否已经越狱</span></div><div class="line"><span class="keyword">void</span> dylibCheck() </div><div class="line">&#123;</div><div class="line">	uint32_t count = _dyld_image_count();</div><div class="line">	<span class="keyword">char</span> *substrate = <span class="string">"/Library/MobileSubstrate/MobileSubstrate.dylib"</span>;</div><div class="line">	<span class="keyword">for</span>(uint32_t i = <span class="number">0</span>; i &lt; count; i++) </div><div class="line">	&#123;</div><div class="line">		<span class="keyword">const</span> <span class="keyword">char</span> *dyld = _dyld_get_image_name(i);</div><div class="line">		<span class="keyword">if</span> (strcmp(dyld,substrate)==<span class="number">0</span>) </div><div class="line">			&#123; </div><div class="line">				<span class="built_in">NSLog</span>(<span class="string">@"Substrate found!"</span>); </div><div class="line">			&#125;</div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="判断手机是否越狱"><a href="#判断手机是否越狱" class="headerlink" title="判断手机是否越狱"></a>判断手机是否越狱</h1><figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#通过_dyld_image_count 和 _dyld_get_image_name 来获取当前所有加载的dylib 并判断是否加载了MobileSubstrate.dylib\</span></div><div class="line"><span class="meta">#来判断手机是否已经越狱</span></div><div class="line"><span class="keyword">void</span> dylibCheck() </div><div class="line">&#123;</div><div class="line">	uint32_t count = _dyld_image_count();</div><div class="line">	<span class="keyword">char</span> *substrate = <span class="string">"/Library/MobileSubstrate/MobileSubstrate.dylib"</span>;</div><div class="line">	<span class="keyword">for</span>(uint32_t i = <span class="number">0</span>; i &lt; count; i++) </div><div class="line">	&#123;</div><div class="line">		<span class="keyword">const</span> <span class="keyword">char</span> *dyld = _dyld_get_image_name(i);</div><div class="line">		<span class="keyword">if</span> (strcmp(dyld,substrate)==<span class="number">0</span>) </div><div class="line">			&#123; </div><div class="line">				<span class="built_in">NSLog</span>(<span class="string">@"Substrate found!"</span>); </div><div class="line">			&#125;</div><div class="line">	&#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <blockquote>
 <p><strong>Solution</strong> </p>
 </blockquote>
@@ -571,7 +571,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
