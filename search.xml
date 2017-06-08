@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Ms Liu is a Pig]]></title>
-    <url>%2F2017%2F06%2F08%2FMs-Liu-is-a-Pig%2F</url>
-    <content type="text"><![CDATA[刘瑜是个猪]]></content>
-  </entry>
-  <entry>
     <title><![CDATA[Decrypting iOS applications using lldb]]></title>
     <url>%2F2017%2F06%2F08%2FDecrypting-iOS-applications-using-lldb%2F</url>
     <content type="text"><![CDATA[通过lldb or gdb decrypt ios application …. In Book Hacking iOS Applications]]></content>
