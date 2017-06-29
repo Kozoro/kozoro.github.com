@@ -291,6 +291,148 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/19/YouKu-Reverse-Analysis-For-Android/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Kozoro">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kozoro Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/19/YouKu-Reverse-Analysis-For-Android/" itemprop="url">YouKu Reverse Analysis For Android</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-19T18:21:06+08:00">
+                2017-06-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Anti/" itemprop="url" rel="index">
+                    <span itemprop="name">Anti</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>** 记录在Youku for android 逆向过程中的点点滴滴</p>
+</blockquote>
+<h1 id="启动参数"><a href="#启动参数" class="headerlink" title="启动参数"></a><strong>启动参数</strong></h1><blockquote>
+<p>关键文件列表<br>Lorg/openad/common/util/Utils; <strong>guid aid gdia imei 实现</strong><br>Lcom/youdo/vo/parameter/AbstractXAdHttpRequestParameter</p>
+</blockquote>
+<h4 id="Gdid-生成算法"><a href="#Gdid-生成算法" class="headerlink" title="Gdid 生成算法"></a><strong>Gdid</strong> 生成算法</h4><p>获取MacAddress和IMEI  使用&amp;相连,然后使用md5加密<br>md5(macaddress&amp;imei)</p>
+<h4 id="aid-生成算法"><a href="#aid-生成算法" class="headerlink" title="aid 生成算法"></a><strong>aid</strong> 生成算法</h4><p>其实是android_id<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">invoke-virtual &#123;p1&#125;, Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">invoke-virtual &#123;v0&#125;, Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">const-string/jumbo v1, <span class="string">"android_id"</span></div><div class="line"></div><div class="line">invoke-static &#123;v0, v1&#125;, Landroid/provider/Settings<span class="variable">$Secure</span>;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">iput-object v0, p0, Lcom/youdo/vo/parameter/AbstractXAdHttpRequestParameter;-&gt;aid:Ljava/lang/String;</div></pre></td></tr></table></figure></p>
+<h4 id="guid-生成算法"><a href="#guid-生成算法" class="headerlink" title="guid 生成算法"></a><strong>guid</strong> 生成算法</h4><p>md5(getMacAddress&amp;getIMEI&amp;&amp;)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line">invoke-direct &#123;v0&#125;, Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()V</div><div class="line"></div><div class="line">invoke-static &#123;p0&#125;, Lorg/openad/common/util/Utils;-&gt;getMacAddress(Landroid/content/Context;)Ljava/lang/String;</div><div class="line"></div><div class="line">move-result-object v1</div><div class="line"></div><div class="line">invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">const-string/jumbo v1, <span class="string">"&amp;"</span></div><div class="line"></div><div class="line">invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">invoke-static &#123;p0&#125;, Lorg/openad/common/util/Utils;-&gt;getIMEI(Landroid/content/Context;)Ljava/lang/String;</div><div class="line"></div><div class="line">move-result-object v1</div><div class="line"></div><div class="line">invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">const-string/jumbo v1, <span class="string">"&amp;&amp;"</span></div><div class="line"></div><div class="line">invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">invoke-virtual &#123;v0&#125;, Ljava/lang/StringBuilder;-&gt;toString()Ljava/lang/String;</div><div class="line"></div><div class="line">move-result-object v0</div><div class="line"></div><div class="line">invoke-static &#123;v0&#125;, Lorg/openad/common/util/Utils;-&gt;md5(Ljava/lang/String;)Ljava/lang/String;</div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://Kozoro.github.io/2017/06/09/2017-Plan/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1098,7 +1240,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1120,7 +1262,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
