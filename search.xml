@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[YouKu Reverse Analysis For Android]]></title>
-    <url>%2F2017%2F06%2F19%2FYouKu-Reverse-Analysis-For-Android%2F</url>
-    <content type="text"><![CDATA[** 记录在Youku for android 逆向过程中的点点滴滴 启动参数 关键文件列表Lorg/openad/common/util/Utils; guid aid gdia imei 实现Lcom/youdo/vo/parameter/AbstractXAdHttpRequestParameter Gdid 生成算法获取MacAddress和IMEI 使用&amp;相连,然后使用md5加密md5(macaddress&amp;imei) aid 生成算法其实是android_id123456789101112131415invoke-virtual &#123;p1&#125;, Landroid/content/Context;-&gt;getApplicationContext()Landroid/content/Context;move-result-object v0invoke-virtual &#123;v0&#125;, Landroid/content/Context;-&gt;getContentResolver()Landroid/content/ContentResolver;move-result-object v0const-string/jumbo v1, "android_id"invoke-static &#123;v0, v1&#125;, Landroid/provider/Settings$Secure;-&gt;getString(Landroid/content/ContentResolver;Ljava/lang/String;)Ljava/lang/String;move-result-object v0iput-object v0, p0, Lcom/youdo/vo/parameter/AbstractXAdHttpRequestParameter;-&gt;aid:Ljava/lang/String; guid 生成算法md5(getMacAddress&amp;getIMEI&amp;&amp;)1234567891011121314151617181920212223242526272829303132333435invoke-direct &#123;v0&#125;, Ljava/lang/StringBuilder;-&gt;&lt;init&gt;()Vinvoke-static &#123;p0&#125;, Lorg/openad/common/util/Utils;-&gt;getMacAddress(Landroid/content/Context;)Ljava/lang/String;move-result-object v1invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;move-result-object v0const-string/jumbo v1, "&amp;"invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;move-result-object v0invoke-static &#123;p0&#125;, Lorg/openad/common/util/Utils;-&gt;getIMEI(Landroid/content/Context;)Ljava/lang/String;move-result-object v1invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;move-result-object v0const-string/jumbo v1, "&amp;&amp;"invoke-virtual &#123;v0, v1&#125;, Ljava/lang/StringBuilder;-&gt;append(Ljava/lang/String;)Ljava/lang/StringBuilder;move-result-object v0invoke-virtual &#123;v0&#125;, Ljava/lang/StringBuilder;-&gt;toString()Ljava/lang/String;move-result-object v0invoke-static &#123;v0&#125;, Lorg/openad/common/util/Utils;-&gt;md5(Ljava/lang/String;)Ljava/lang/String;]]></content>
-      <categories>
-        <category>Anti</category>
-      </categories>
-      <tags>
-        <tag>android</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[2017 Plan]]></title>
     <url>%2F2017%2F06%2F09%2F2017-Plan%2F</url>
     <content type="text"><![CDATA[发现自己最近几年来读的书越来越少了,特此开一个栏目用来计划以及记录每年预计要读得书籍和一些开源代码 2017 读书计划研究IOS以及MACOS下的一些攻防书籍 《iOS应用安全攻防实战》 《iOS应用安全权威指南》 《莱昂氏UNIX源代码分析》 《macOS软件安全与逆向分析》 待出版 相关读书笔记部分以及源代码理解部分会单独放出文章:D… 开源代码学习学习 分析 总结 fishhook Ios_Class_Guard 待添加]]></content>
