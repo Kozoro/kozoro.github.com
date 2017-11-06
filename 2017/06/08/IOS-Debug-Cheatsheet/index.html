@@ -100,7 +100,7 @@
 <meta property="og:url" content="http://Kozoro.github.io/2017/06/08/IOS-Debug-Cheatsheet/index.html">
 <meta property="og:site_name" content="Kozoro Blog">
 <meta property="og:description" content="command查找进程">
-<meta property="og:updated_time" content="2017-11-06T01:23:25.000Z">
+<meta property="og:updated_time" content="2017-11-06T01:35:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOS Debug Cheatsheet ">
 <meta name="twitter:description" content="command查找进程">
@@ -214,7 +214,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -224,7 +224,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -237,7 +237,7 @@
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            Search
+            Suche
           </a>
         </li>
       
@@ -318,7 +318,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-08T13:48:43+08:00">
                 2017-06-08
@@ -339,7 +339,7 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">in</span>
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
@@ -382,6 +382,7 @@
 <h4 id="查找文件"><a href="#查找文件" class="headerlink" title="查找文件"></a>查找文件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">grep -r findfile  /System/Library/</div></pre></td></tr></table></figure>
 <h4 id="分离-fat-binary"><a href="#分离-fat-binary" class="headerlink" title="分离 fat binary"></a>分离 fat binary</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lipo -thin armv7 xxx.decrypted -out xxx_armv7.decrypted</div><div class="line">lipo -thin arm64 xxx.decrypted -out xxx_arm64.decrypted</div></pre></td></tr></table></figure>
 <h4 id="Class-Dump"><a href="#Class-Dump" class="headerlink" title="Class Dump"></a>Class Dump</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">class-dump --list-arches xxx.decrypted</div><div class="line"></div><div class="line">class-dump -S -s -H xxx_armv7.decrypted -o dumparmv7</div><div class="line">class-dump -s -S -H --arch armv7 xxx.decrypted -o xxx</div></pre></td></tr></table></figure>
+<h1 id="封包"><a href="#封包" class="headerlink" title="封包"></a><strong>封包</strong></h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">rvictl  -s b5c11d587b1eb07dc67e2ec6358ca309e0ade752</div><div class="line">sudo tcpdump -i rvi0  -w  /path/</div></pre></td></tr></table></figure>
 <h1 id="LLDB"><a href="#LLDB" class="headerlink" title="LLDB"></a><strong>LLDB</strong></h1><h4 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h4><ul>
 <li><a href="https://github.com/iosre/iOSAppReverseEngineering" target="_blank" rel="external">https://github.com/iosre/iOSAppReverseEngineering</a></li>
 <li><a href="http://objccn.io/issue-19-2/" target="_blank" rel="external">http://objccn.io/issue-19-2/</a></li>
@@ -539,10 +540,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -563,7 +564,7 @@
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
                 <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">posts</span>
+                <span class="site-state-item-name">Artikel</span>
               </a>
             </div>
           
@@ -574,7 +575,7 @@
             <div class="site-state-item site-state-categories">
               
                 <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">categories</span>
+                <span class="site-state-item-name">Kategorien</span>
               
             </div>
           
@@ -585,7 +586,7 @@
             <div class="site-state-item site-state-tags">
               
                 <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">tags</span>
+                <span class="site-state-item-name">Tags</span>
               
             </div>
           
@@ -619,7 +620,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#command"><span class="nav-number">1.</span> <span class="nav-text">command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查找进程"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">查找进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找文件"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">查找文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分离-fat-binary"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">分离 fat binary</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-Dump"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Class Dump</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LLDB"><span class="nav-number">2.</span> <span class="nav-text">LLDB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">2.0.0.1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帮助"><span class="nav-number">2.0.0.2.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打印UI结构"><span class="nav-number">2.0.0.3.</span> <span class="nav-text">打印UI结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈信息"><span class="nav-number">2.0.0.4.</span> <span class="nav-text">栈信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#断点"><span class="nav-number">2.0.0.5.</span> <span class="nav-text">断点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lookup"><span class="nav-number">2.0.0.6.</span> <span class="nav-text">lookup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DUMP内存到本地"><span class="nav-number">2.0.0.7.</span> <span class="nav-text">DUMP内存到本地</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程调试"><span class="nav-number">2.0.0.8.</span> <span class="nav-text">远程调试</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh"><span class="nav-number">3.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Info-plist"><span class="nav-number">4.</span> <span class="nav-text">Info.plist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输出bundle-id"><span class="nav-number">4.0.0.1.</span> <span class="nav-text">输出bundle id</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hook-all-process"><span class="nav-number">4.0.0.2.</span> <span class="nav-text">hook all process</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dumpdecrypted"><span class="nav-number">5.</span> <span class="nav-text">dumpdecrypted</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-1"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#theos"><span class="nav-number">6.</span> <span class="nav-text">theos</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-2"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#usbmuxd"><span class="nav-number">7.</span> <span class="nav-text">usbmuxd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-3"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iproxy"><span class="nav-number">8.</span> <span class="nav-text">iproxy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">9.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-Blog"><span class="nav-number">10.</span> <span class="nav-text">hexo Blog</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#command"><span class="nav-number">1.</span> <span class="nav-text">command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查找进程"><span class="nav-number">1.0.0.1.</span> <span class="nav-text">查找进程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找文件"><span class="nav-number">1.0.0.2.</span> <span class="nav-text">查找文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分离-fat-binary"><span class="nav-number">1.0.0.3.</span> <span class="nav-text">分离 fat binary</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Class-Dump"><span class="nav-number">1.0.0.4.</span> <span class="nav-text">Class Dump</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#封包"><span class="nav-number">2.</span> <span class="nav-text">封包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LLDB"><span class="nav-number">3.</span> <span class="nav-text">LLDB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考"><span class="nav-number">3.0.0.1.</span> <span class="nav-text">参考</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#帮助"><span class="nav-number">3.0.0.2.</span> <span class="nav-text">帮助</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打印UI结构"><span class="nav-number">3.0.0.3.</span> <span class="nav-text">打印UI结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#栈信息"><span class="nav-number">3.0.0.4.</span> <span class="nav-text">栈信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#断点"><span class="nav-number">3.0.0.5.</span> <span class="nav-text">断点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lookup"><span class="nav-number">3.0.0.6.</span> <span class="nav-text">lookup</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DUMP内存到本地"><span class="nav-number">3.0.0.7.</span> <span class="nav-text">DUMP内存到本地</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#远程调试"><span class="nav-number">3.0.0.8.</span> <span class="nav-text">远程调试</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ssh"><span class="nav-number">4.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Info-plist"><span class="nav-number">5.</span> <span class="nav-text">Info.plist</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输出bundle-id"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">输出bundle id</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#hook-all-process"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">hook all process</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#dumpdecrypted"><span class="nav-number">6.</span> <span class="nav-text">dumpdecrypted</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-1"><span class="nav-number">6.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#theos"><span class="nav-number">7.</span> <span class="nav-text">theos</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-2"><span class="nav-number">7.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#usbmuxd"><span class="nav-number">8.</span> <span class="nav-text">usbmuxd</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考-3"><span class="nav-number">8.0.0.1.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#iproxy"><span class="nav-number">9.</span> <span class="nav-text">iproxy</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git"><span class="nav-number">10.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hexo-Blog"><span class="nav-number">11.</span> <span class="nav-text">hexo Blog</span></a></li></ol></div>
             
 
           </div>
@@ -651,7 +652,7 @@
 
 
 <div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
